@@ -1,0 +1,31 @@
+<settings>
+<servers>
+  <server>
+    <id>dolphine-nextwork-devops-cicd</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>dolphine-nextwork-devops-cicd</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>dolphine-nextwork-devops-cicd</id>
+        <url>https://dolphine-361769564585.d.codeartifact.us-east-1.amazonaws.com/maven/nextwork-devops-cicd/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>dolphine-nextwork-devops-cicd</id>
+    <name>dolphine-nextwork-devops-cicd</name>
+    <url>https://dolphine-361769564585.d.codeartifact.us-east-1.amazonaws.com/maven/nextwork-devops-cicd/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
